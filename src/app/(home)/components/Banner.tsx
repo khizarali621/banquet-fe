@@ -6,7 +6,7 @@ import { Header } from "@/components/ui";
 
 const BookCards = [
   {
-    head: "Book A Our Service",
+    head: "Book A Our Services",
   },
   {
     head: "Book for a Weeding",
