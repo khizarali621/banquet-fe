@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #121212;
+    --foreground: #ff75000a;
+
+    --primary: #ff6b00;
+    --primary-foreground: #121212;
+
+    --secondary: #292929;
+    --secondary-foreground: #a9a9a9;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  p {
+    @apply sm:text-base text-sm;
+  }
+  .h1 {
+    @apply lg:text-[50px] md:text-[40px] sm:text-4xl text-2xl font-semibold text-white;
+  }
+  .h2 {
+    @apply lg:text-[45px] md:text-4xl sm:text-2xl text-xl font-bold;
+  }
+  .h3 {
+    @apply md:text-[32px] sm:text-2xl text-xl;
+  }
+  .h4 {
+    @apply lg:text-2xl md:text-xl text-base;
+  }
+
+  .h5 {
+    @apply md:text-xl sm:text-lg text-base font-bold;
+  }
+}
+
+.bd {
+  border: 1px solid red;
+}
+.book-shadow {
+  box-shadow: 1.08px 7.57px 23.8px 0px #0000001a;
+}
+.interior-shadow {
+  box-shadow: 0px 12px 26px 0px #00000026;
+}
