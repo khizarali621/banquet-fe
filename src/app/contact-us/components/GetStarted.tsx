@@ -58,7 +58,7 @@ const GetStarted = () => {
           <div className="flex flex-col justify-center md:gap-6 gap-3">
             {ContactCards.map((item, i) => (
               <div
-                className="md:w-12 md:h-12 w-8 h-8 flex items-center justify-center rounded-full border border-[#B7B7B7] bg-transparent hover:bg-black text-black hover:text-white"
+                className="md:w-12 md:h-12 w-8 h-8 flex items-center justify-center rounded-full border border-[#B7B7B7] bg-transparent hover:bg-black text-black hover:text-white cursor-pointer"
                 key={i}
               >
                 {item.icon}
