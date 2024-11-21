@@ -44,7 +44,7 @@ const ContactInput = React.forwardRef<HTMLInputElement, InputProps>(
         <input
           type={inputType}
           className={cn(
-            "flex w-full border-b-[1.5px] bg-transparent border-[#CACACA] focus-visible:outline-none focus-visible:ring-0 disabled:cursor-not-allowed disabled:opacity-50",
+            "flex w-full border-b-[1.5px] text-black/70 bg-transparent border-[#CACACA] focus-visible:outline-none focus-visible:ring-0 disabled:cursor-not-allowed disabled:opacity-50",
             className,
             sizeStyles[size],
             AddIcon && "pl-12"
