@@ -1,35 +1,44 @@
 import { Button, Container } from "@/components/common";
 import { Input } from "@/components/common/Forms/Input";
 import { Facebook, Twitter, Youtube } from "@/components/common/Icons";
+import Link from "next/link";
 import React from "react";
 
 type Props = {};
 
 const LinkCard = [
   {
+    href: "",
     name: "Home",
   },
   {
+    href: "",
     name: "Services",
   },
   {
+    href: "",
     name: "About us",
   },
   {
+    href: "/contact-us",
     name: "Contact",
   },
 ];
 const UsefulCard = [
   {
+    href: "",
     name: "Privacy policy",
   },
   {
+    href: "",
     name: "Legal",
   },
   {
+    href: "",
     name: "FAQ",
   },
   {
+    href: "",
     name: "Blogs",
   },
 ];
@@ -53,7 +62,7 @@ const Footer = (props: Props) => {
                 name="email"
                 className="placeholder:text-white/20 text-white"
               />
-              <Button className="!px-4 !py-4 rounded-r-md -ml-1 relative z-10">
+              <Button className="!px-4 !py-4 rounded-r-md -ml-0.5 relative z-10 ">
                 Subscribe
               </Button>
             </div>
@@ -69,12 +78,14 @@ const Footer = (props: Props) => {
 
               <ul className="flex flex-col gap-[22px] pt-6">
                 {LinkCard.map((item, i) => (
-                  <li
-                    className="text-base xs:text-sm font-normal text-white font-aeonik hover:underline"
-                    key={i}
-                  >
-                    {item.name}
-                  </li>
+                  <Link href={item.href}>
+                    <li
+                      className="text-base xs:text-sm font-normal text-white font-aeonik hover:underline cursor-pointer"
+                      key={i}
+                    >
+                      {item.name}
+                    </li>
+                  </Link>
                 ))}
               </ul>
             </div>
@@ -109,12 +120,14 @@ const Footer = (props: Props) => {
 
               <ul className="flex flex-col gap-[22px] pt-6">
                 {UsefulCard.map((item, i) => (
-                  <li
-                    className="text-base xs:text-sm font-normal text-white font-aeonik hover:underline"
-                    key={i}
-                  >
-                    {item.name}
-                  </li>
+                  <Link href={item.href}>
+                    <li
+                      className="text-base xs:text-sm font-normal text-white font-aeonik hover:underline cursor-pointer"
+                      key={i}
+                    >
+                      {item.name}
+                    </li>
+                  </Link>
                 ))}
               </ul>
             </div>

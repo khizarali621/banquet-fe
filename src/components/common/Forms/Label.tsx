@@ -7,7 +7,12 @@ interface Iprops {
 
 export function Label({ children, className }: Iprops) {
   return (
-    <label className={clsx(className, "mb-3 inline-block text-base font-bold")}>
+    <label
+      className={clsx(
+        className,
+        "ml-1 inline-block lg:text-2xl md:text-lg text-base font-normal"
+      )}
+    >
       {children}
     </label>
   );

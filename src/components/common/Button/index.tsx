@@ -6,10 +6,11 @@ import {
   SsProps,
   VsProps,
 } from "@/interfaces/button.interface";
+import { ButtonArrow } from "../Icons";
 
 const baseStyles: BsProps = {
   solid:
-    "inline-flex justify-center items-center  border-2 leading-none font-medium disabled:cursor-not-allowed disabled:text-white",
+    "inline-flex justify-center items-center group  border-2 leading-none font-medium disabled:cursor-not-allowed disabled:text-white",
   outline:
     "inline-flex justify-center items-center  border-2 leading-none font-medium disabled:cursor-not-allowed disabled:text-white",
 };
@@ -17,11 +18,11 @@ const baseStyles: BsProps = {
 const variantStyles: VsProps = {
   solid: {
     primary:
-      "bg-primary text-[#FFFFFF] active:text-#FFFFFF/80 border-primary hover:border-white disabled:opacity-30 disabled:hover:bg-primary disabled:text-white hover:bg-transparent hover:text-white",
+      "bg-primary text-[#FFFFFF] hover:bg-white hover:text-primary active:text-#FFFFFF/80 border-primary hover:border-white disabled:opacity-30 disabled:hover:bg-primary disabled:text-white",
   },
   outline: {
     primary:
-      "border-white bg-transparent hover:text-white text-white hover:bg-primary hover:border-primary active:border-primary/20 active:bg-primary/10 active:text-primary/70 disabled:text-white disabled:opacity-40 disabled:hover:border-white disabled:hover:bg-transparent",
+      "border-white bg-transparent text-white hover:bg-primary hover:border-primary active:border-primary/20 active:bg-primary/10 active:text-primary/70 disabled:text-white disabled:opacity-40 disabled:hover:border-white disabled:hover:bg-transparent",
   },
 };
 
@@ -39,6 +40,8 @@ const Button = ({
   disabled,
   isLoading,
   children,
+  arrow,
+
   loaderClass,
   ...props
 }: IButtonProps) => {
@@ -49,6 +52,8 @@ const Button = ({
         variantStyles[variant][color],
         sizeStyles[size],
         className,
+        arrow,
+
         isLoading &&
           "relative !cursor-wait !text-transparent hover:!text-transparent"
       )}
@@ -62,6 +67,11 @@ const Button = ({
         </div>
       )}
       {children}
+      {arrow && (
+        <div className=" transition-all duration-200 ease-out  group-hover:translate-x-2">
+          <ButtonArrow />
+        </div>
+      )}
     </button>
   );
 };

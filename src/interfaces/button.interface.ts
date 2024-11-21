@@ -25,6 +25,7 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   color?: "primary";
   className?: string;
   href?: string;
+  arrow?: boolean;
   children?: ReactNode;
   loaderClass?: string;
   size?: "sm" | "md" | "lg";

@@ -20,7 +20,7 @@ const Navigation = [
   },
   {
     name: "Contact",
-    href: "",
+    href: "/contact-us",
   },
 ];
 
@@ -61,8 +61,8 @@ const Header = () => {
       </Head>
       <nav
         className={`sticky 
-          ${isScrolledDown ? "-top-16" : "top-0"}
-        } w-full md:py-0 py-2 bg-background  z-50 shadow duration-300`}
+          ${isScrolledDown ? "-top-16 " : "top-0"}
+         w-full md:py-0 py-2 bg-transparent  z-50 shadow duration-300`}
       >
         <div className="justify-between md:flex md:items-center">
           <div className="flex items-center justify-between md:block">
@@ -114,7 +114,7 @@ const Header = () => {
           <div
             className={`overflow-hidden  duration-300 ease-linear ${
               navbar
-                ? "h-60  pt-2 md:h-auto md:pb-0 md:pt-0 bg-background"
+                ? "h-60  pt-2 md:h-auto md:pb-0 md:pt-0 relative z-20"
                 : "mt-0  h-0  md:h-auto"
             }`}
           >
