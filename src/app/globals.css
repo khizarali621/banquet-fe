@@ -61,3 +61,10 @@
   background-image: url("/assets/images/Contact-Info.png");
   background-size: 100% 100%;
 }
+.far-bg-shadow {
+  box-shadow: 2px 6px 34px 10px #00000014;
+}
+.bgBlur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}

@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
 import AppProvider from "@/providers/AppProvider";
-import { Footer } from "@/components/ui";
+import { Footer, Header } from "@/components/ui";
 import generateMetadata from "@/lib/metadata";
 import { ToastContainer } from "react-toastify";
 import { cn } from "@/lib/utils";
@@ -52,6 +52,7 @@ export default function RootLayout({
       >
         <AppProvider>
           <ToastContainer position="top-center" />
+          <Header />
           {children}
           <Footer />
         </AppProvider>
