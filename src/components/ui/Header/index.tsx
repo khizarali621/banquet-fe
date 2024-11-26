@@ -98,7 +98,9 @@ const Header = () => {
             </Link>
             <div className="flex items-center gap-1 lg:hidden">
               <Link href="#" className="">
-                <Button className="whitespace-nowrap ">Book Now</Button>
+                <Button className="whitespace-nowrap xs1:!px-2 xs1:!text-sm">
+                  Book Now
+                </Button>
               </Link>
               <button
                 className="p-1.5 text-primary outline-none"
