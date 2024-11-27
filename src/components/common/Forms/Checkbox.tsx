@@ -8,7 +8,7 @@ const Checkboxs = (props: Props) => {
   const [enabled, setEnabled] = useState(true);
 
   return (
-    <div className="flex justify-center bg-transparent">
+    <div className="flex justify-center bg-transparent cursor-pointer">
       <Checkbox
         checked={enabled}
         onChange={setEnabled}
