@@ -76,7 +76,7 @@ const Interior = () => {
               <div className="grid grid-cols-2 xs:grid-cols-1 md:gap-10 gap-6">
                 {InteriorCards.map((item, i) => (
                   <div
-                    className="pt-10 pb-9 pl-6 pr-2.5 interior-shadow rounded bg-white"
+                    className="pt-10 pb-9 pl-6 pr-2.5 interior-shadow rounded bg-white hover:-translate-y-2 duration-300"
                     key={i}
                   >
                     <ImageComponent src={item.src} width={56} height={56} />
