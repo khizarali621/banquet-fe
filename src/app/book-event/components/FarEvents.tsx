@@ -56,7 +56,7 @@ const FarEvents = () => {
         <img
           src="/assets/images/hallbg.png"
           alt=""
-          className="absolute -left-10 -top-0 -translate-y-1/2"
+          className="absolute -left-10 -top-0 -z-10 -translate-y-1/2"
         />
         <h1 className="h2 text-center xl:text-[48px] text-black">
           Receipt Form for Event Booking
@@ -65,22 +65,22 @@ const FarEvents = () => {
           <section className="flex lg:gap-10 gap-6 xs:flex-col w-full">
             <div className="flex flex-col gap-2.5 w-full">
               <Label className="!text-base !font-medium">Company</Label>
-              <Select options={eventCompany} />
+              <Select options={eventCompany} className="" />
             </div>
             <div className="flex flex-col gap-2.5 w-full">
               <Label className="!text-base !font-medium">Station</Label>
-              <Select options={eventStation} />
+              <Select options={eventStation} className="" />
             </div>
           </section>
 
           <section className="flex lg:gap-10 gap-6 xs:flex-col w-full md:mt-10 mt-5">
             <div className="flex flex-col gap-2.5 w-full">
               <Label className="!text-base !font-medium">Cost Center</Label>
-              <Select options={CostCenter} />
+              <Select options={CostCenter} className="" />
             </div>
             <div className="flex flex-col gap-2.5 w-full">
               <Label className="!text-base !font-medium">Venue</Label>
-              <Select options={eventVenue} />
+              <Select options={eventVenue} className="" />
             </div>
           </section>
 
@@ -161,11 +161,11 @@ const FarEvents = () => {
           <section className="flex lg:gap-10 gap-6 xs:flex-col w-full md:mt-10 mt-5">
             <div className="flex flex-col gap-2.5 w-full">
               <Label className="!text-base !font-medium">Type</Label>
-              <Select options={TypeVenue} />
+              <Select options={TypeVenue} className="" />
             </div>
             <div className="flex flex-col gap-2.5 w-full">
               <Label className="!text-base !font-medium">Status</Label>
-              <Select options={StatueVenue} />
+              <Select options={StatueVenue} className="" />
             </div>
           </section>
         </Container>

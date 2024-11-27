@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
 import AppProvider from "@/providers/AppProvider";
@@ -28,9 +28,16 @@ const aeonik = localFont({
   ],
   variable: "--font-aeonik",
 });
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
 });
 
 export const metadata = generateMetadata();
@@ -47,7 +54,8 @@ export default function RootLayout({
         className={cn(
           "min-h-screen font-display antialiased",
           inter.variable,
-          aeonik.variable
+          aeonik.variable,
+          poppins.variable
         )}
       >
         <AppProvider>

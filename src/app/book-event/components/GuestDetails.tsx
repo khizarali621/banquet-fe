@@ -16,7 +16,7 @@ const GuestDetails = () => {
       <img
         src="/assets/images/hallbg.png"
         alt=""
-        className="absolute left-0 -bottom-1/2 "
+        className="absolute left-0 -bottom-1/2 -z-10"
       />
       <h1 className="h2 text-center xl:text-[48px] text-black">
         Guest Details
@@ -25,7 +25,7 @@ const GuestDetails = () => {
         <section className="flex lg:gap-10 gap-6 xs:flex-col w-full">
           <div className="flex flex-col gap-2.5 w-full">
             <Label className="!text-base !font-medium">Guest Type</Label>
-            <Select options={eventGuest} />
+            <Select options={eventGuest} className="" />
           </div>
           <div className="flex flex-col gap-2.5 w-full">
             <Label className="!text-base !font-medium">Guest Name</Label>

@@ -21,7 +21,7 @@ const SubscribeLetter = () => {
             name="email"
             className="placeholder:text-white !border-none text-white bg-[#FFFFFF33]"
           />
-          <Button className="!px-4 !py-5 rounded-r-md -ml-1 relative z-10 !bg-white !text-primary !border-white">
+          <Button className="!px-4 !py-5 rounded-r-md -ml-1 relative z-10 !border-white">
             Subscribe
           </Button>
         </div>

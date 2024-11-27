@@ -25,7 +25,7 @@ const CustomerDetails = () => {
       <img
         src="/assets/images/hallbgright.png"
         alt=""
-        className="absolute right-0 -top-16 "
+        className="absolute right-0 -top-16 -z-10"
       />
       <h1 className="h2 text-center xl:text-[48px] text-black">
         Customer Details
@@ -34,7 +34,7 @@ const CustomerDetails = () => {
         <section className="flex lg:gap-10 gap-6 xs:flex-col w-full">
           <div className="flex flex-col gap-2.5 w-full">
             <Label className="!text-base !font-medium">Customer</Label>
-            <Select options={eventCustomer} />
+            <Select options={eventCustomer} className="" />
           </div>
           <div className="flex flex-col gap-2.5 w-full">
             <Label className="!text-base !font-medium">Customer Name</Label>
@@ -49,7 +49,7 @@ const CustomerDetails = () => {
         <section className="flex lg:gap-10 gap-6 xs:flex-col w-full md:mt-10 mt-5">
           <div className="flex flex-col gap-2.5 w-full">
             <Label className="!text-base !font-medium">City</Label>
-            <Select options={eventCity} />
+            <Select options={eventCity} className="" />
           </div>
           <div className="flex flex-col gap-2.5 w-full">
             <Label className="!text-base !font-medium">Address</Label>

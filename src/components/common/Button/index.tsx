@@ -18,11 +18,11 @@ const baseStyles: BsProps = {
 const variantStyles: VsProps = {
   solid: {
     primary:
-      "bg-primary text-[#FFFFFF] hover:bg-white hover:text-primary active:text-#FFFFFF/80 border-primary hover:border-white disabled:opacity-30 disabled:hover:bg-primary disabled:text-white",
+      "border-primary text-primary bg-white hover:bg-primary hover:text-white active:text-#FFFFFF/80 border-primary hover:border-white disabled:opacity-30 disabled:hover:bg-primary disabled:text-white",
   },
   outline: {
     primary:
-      "border-white bg-transparent text-white hover:bg-primary hover:border-primary active:border-primary/20 active:bg-primary/10 active:text-primary/70 disabled:text-white disabled:opacity-40 disabled:hover:border-white disabled:hover:bg-transparent",
+      "border-primary bg-primary text-white hover:border-primary hover:text-primary hover:bg-white active:border-primary/20 active:bg-primary/10 active:text-primary/70 disabled:text-white disabled:opacity-40 disabled:hover:border-white disabled:hover:bg-transparent",
   },
 };
 
@@ -53,9 +53,9 @@ const Button = ({
         sizeStyles[size],
         className,
         arrow,
-
+        "group",
         isLoading &&
-          "relative !cursor-wait !text-transparent hover:!text-transparent"
+          " relative !cursor-wait !text-transparent hover:!text-transparent"
       )}
       type={type || "button"}
       disabled={disabled}

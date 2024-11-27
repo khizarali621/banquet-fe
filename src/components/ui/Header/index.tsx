@@ -19,6 +19,7 @@ const Header = () => {
   const [scrollBackground, setScrollBackground] = useState(false);
   const [isScrolledDown, setIsScrolledDown] = useState(false);
   const [prevScrollY, setPrevScrollY] = useState(0);
+  const [buttonClicked, setButtonClicked] = useState(false); // State to track button click
 
   // Add/remove `no-scroll` class to the body when navbar toggles
   useEffect(() => {
@@ -76,6 +77,19 @@ const Header = () => {
   }`;
   const pathSegment = pathnameWithHash.slice(1);
 
+  // Watch for pathname changes to trigger functionality
+  useEffect(() => {
+    if (pathname === "/book-event" && buttonClicked) {
+      // Perform additional functionality when button is clicked and user is on book-event page
+      console.log("Button clicked on /book-event page!");
+      setButtonClicked(false); // Reset the state if needed
+    }
+  }, [pathname, buttonClicked]);
+
+  const handleButtonClick = () => {
+    setButtonClicked(true);
+  };
+
   return (
     <div
       className={`${
@@ -97,8 +111,11 @@ const Header = () => {
               <img src="/assets/images/Logo.svg" alt="logo" className="" />
             </Link>
             <div className="flex items-center gap-1 lg:hidden">
-              <Link href="#" className="">
-                <Button className="whitespace-nowrap xs1:!px-2 xs1:!text-sm">
+              <Link href="/book-event" className="">
+                <Button
+                  className="whitespace-nowrap xs1:!px-3 xs1:!text-sm !border-white !text-white !bg-transparent hover:!border-primary hover:!bg-primary"
+                  onClick={handleButtonClick}
+                >
                   Book Now
                 </Button>
               </Link>
@@ -154,8 +171,13 @@ const Header = () => {
             </ul>
           </div>
 
-          <Link href="#" className="hidden lg:block">
-            <Button variant="outline">Book Now</Button>
+          <Link href="/book-event" className="hidden lg:block">
+            <Button
+              className="!border-white !text-white !bg-transparent hover:!border-primary hover:!bg-primary"
+              onClick={handleButtonClick}
+            >
+              Book Now
+            </Button>
           </Link>
         </div>
       </div>

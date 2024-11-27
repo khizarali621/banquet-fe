@@ -62,7 +62,10 @@ const Footer = (props: Props) => {
                 name="email"
                 className="placeholder:text-white/20 text-white"
               />
-              <Button className="!px-4 !py-4 rounded-r-md -ml-0.5 relative z-10 ">
+              <Button
+                className="!px-4 !py-4 rounded-r-md -ml-0.5 relative z-10 "
+                variant="outline"
+              >
                 Subscribe
               </Button>
             </div>
@@ -107,7 +110,10 @@ const Footer = (props: Props) => {
                   name="email"
                   className="placeholder:text-white/20 text-white"
                 />
-                <Button className="!px-4 !py-4 rounded-r-md -ml-1 relative z-10">
+                <Button
+                  className="!px-4 !py-4 rounded-r-md -ml-1 relative z-10 hover:!border-white"
+                  variant="outline"
+                >
                   Subscribe
                 </Button>
               </div>

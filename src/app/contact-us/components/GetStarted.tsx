@@ -82,10 +82,7 @@ const GetStarted = () => {
               <ContactInput placeholder="" name="" className="!w-full" />
             </div>
 
-            <Button
-              arrow
-              className="hover:border-2 hover:!border-black hover:!text-black lg:mt-12 md:mt-8 mt-5"
-            >
+            <Button arrow className="lg:mt-12 md:mt-8 mt-5" variant="outline">
               Leave us a Message
             </Button>
           </section>

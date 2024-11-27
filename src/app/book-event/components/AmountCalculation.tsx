@@ -78,9 +78,7 @@ const AmountCalculation = () => {
         </section>
 
         <div className="flex pt-12 w-full justify-end">
-          <Button className="hover:border-2 hover:!border-black hover:!text-black">
-            Check Availability
-          </Button>
+          <Button variant="outline">Check Availability</Button>
         </div>
       </Container>
     </div>

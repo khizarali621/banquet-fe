@@ -26,6 +26,7 @@ const config = {
       fontFamily: {
         display: ["var(--font-inter)", ...fontFamily.sans],
         aeonik: ["var(--font-aeonik)", ...fontFamily.sans],
+        poppins: ["var(--font-poppins)", ...fontFamily.sans],
       },
       screens: {
         xs: { min: "300px", max: "540px" },
