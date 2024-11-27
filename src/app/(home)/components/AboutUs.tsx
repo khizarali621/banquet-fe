@@ -20,7 +20,10 @@ const AboutUs = () => {
               amet sint. Velit officia consequatduis enim.
             </p>
 
-            <Button className="md:mt-12 mt-8" variant="outline">
+            <Button
+              className="md:mt-12 mt-8 !border-primary hover:!border-white"
+              variant="outline"
+            >
               Explore
             </Button>
           </div>
